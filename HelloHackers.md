@@ -11,7 +11,7 @@ whoami
 hello
 pwn.college{8xGT3aBstFinXFxu72wSwgNT-cr.QX3YjM1wSN0kjNzEzW}
 ```
-## New Learnings
+### New Learnings
 we learned that when we enter a command we get an output 
 
 ### Refrences
@@ -29,7 +29,7 @@ hello hackers
 pwn.college{4N96x9OfQyeexklgFn_YRi89KOT.QX4YjM1wSN0kjNzEzW}
 ```
 
-## New Learnings
+### New Learnings
 we learned about that commands have parameters or arguments
 
 ## Command History
@@ -42,5 +42,5 @@ using the arrow keys we can use the previous entered commands again so that we d
 the flag is pwn.college{I41O84kti0oQkdVocsb2i7u2A1o.0lNzEzNxwSN0kjNzEzW}
 ```
 
-## New learnings
+### New learnings
 we learned about using the previously entered commands using arrow keys
