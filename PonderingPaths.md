@@ -10,7 +10,7 @@ The biggest box in which the file is saved. it starts with a / absolute path
 /pwn
 pwn.college{QRSSHQlFU2DpeCvjnLBI4F3aJHU.QX4cTO0wSN0kjNzEzW}
 ```
-## New Learnings
+### New Learnings
 about the absolute path of a program 
 
 ### Refrences
@@ -26,7 +26,7 @@ We subcategorized the location in root directory there is another challenge dire
 /challenge/run
 pwn.college{IRgJFGy9lIfxk4aBv-Vq_xyMIn3.QX1QTN0wSN0kjNzEzW}
 ```
-## New Learnings
+### New Learnings
 about complicated absolute paths that inside the root directory we can make another directory and then another and then accordingly store our progran
 
 ## Position thy self
