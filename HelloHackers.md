@@ -1,7 +1,7 @@
-# Hello HAckers
+# Hello Hackers
 
 ## Challenge name:Intro to commands
-here we entered the coomant whoami and we got the output as hacker so when we enter a command we get the output. we entered the commant hello and the flag was generated
+here we entered the commant whoami and we got the output as hacker so when we enter a command we get the output. we entered the commant hello and the flag was generated
 
 ### Solve
 **Flag** `pwn.college{8xGT3aBstFinXFxu72wSwgNT-cr.QX3YjM1wSN0kjNzEzW}`
