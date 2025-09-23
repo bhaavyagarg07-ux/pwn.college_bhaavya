@@ -42,7 +42,7 @@ cd /usr/share/doc/fontconfig
 /challenge/run
 pwn.college{IRgJFGy9lIfxk4aBv-Vq_xyMIn3.QX1QTN0wSN0kjNzEzW}
 ```
-## New Learnings
+### New Learnings
 about changing directories and to run a program which is located in a specific directory and to execute the program from a specific path
 
 
@@ -59,7 +59,7 @@ cd /usr/aarch64-linux-gnu/include/gnu
 /challenge/run
 pwn.college{IYlh16CeZweb5VYHjChjaWZHh3f.QX3QTN0wSN0kjNzEzW}
 ```
-## New Learnings
+### New Learnings
 about changing directories and to run a program which is located in a specific directory and to execute the program from a specific path
 
 
@@ -76,7 +76,7 @@ cd /etc
 /challenge/run
 pwn.college{UFRlJ9Dfe5BkPUpnkozZEQFjYuO.QX4QTN0wSN0kjNzEzW}
 ```
-## New Learnings
+### New Learnings
 about changing directories and to run a program which is located in a specific directory and to execute the program from a specific path
 
 
@@ -91,7 +91,7 @@ cd /
 challenge/run
 pwn.college{QSiZ3DPxWE-TAIqhd4mPi9KBqei.QX5QTN0wSN0kjNzEzW}
 ```
-## New Learnings
+### New Learnings
 relative paths do not start with / it starts with the file like /challenge/run is a absolute path if the current dirctory is /challenge 
 run becomes the relative path
 
