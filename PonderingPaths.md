@@ -81,16 +81,18 @@ about changing directories and to run a program which is located in a specific d
 
 
 ## Implicit relative paths from /
-
+we need to run /challenge/run using a relative path and having working directory of /
 
 ### Solve
-**Flag** `pwn.college{UFRlJ9Dfe5BkPUpnkozZEQFjYuO.QX4QTN0wSN0kjNzEzW}`
+**Flag** `pwn.college{QSiZ3DPxWE-TAIqhd4mPi9KBqei.QX5QTN0wSN0kjNzEzW}`
 
 ```bash
-/challenge/run
-cd /etc
-/challenge/run
-pwn.college{UFRlJ9Dfe5BkPUpnkozZEQFjYuO.QX4QTN0wSN0kjNzEzW}
+cd /
+challenge/run
+pwn.college{QSiZ3DPxWE-TAIqhd4mPi9KBqei.QX5QTN0wSN0kjNzEzW}
 ```
 ## New Learnings
-about changing directories and to run a program which is located in a specific directory and to execute the program from a specific path
+relative paths do not start with / it starts with the file like /challenge/run is a absolute path if the current dirctory is /challenge 
+run becomes the relative path
+
+
