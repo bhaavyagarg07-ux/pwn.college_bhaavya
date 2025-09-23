@@ -46,5 +46,51 @@ pwn.college{IRgJFGy9lIfxk4aBv-Vq_xyMIn3.QX1QTN0wSN0kjNzEzW}
 about changing directories and to run a program which is located in a specific directory and to execute the program from a specific path
 
 
+## Position eleswhere
+We can look for our files through navigating different directories using cd command (change directory).
+we executed the program challenge run through a specific directory
+
+### Solve
+**Flag** `pwn.college{IYlh16CeZweb5VYHjChjaWZHh3f.QX3QTN0wSN0kjNzEzW}`
+
+```bash
+/challenge/run
+cd /usr/aarch64-linux-gnu/include/gnu
+/challenge/run
+pwn.college{IYlh16CeZweb5VYHjChjaWZHh3f.QX3QTN0wSN0kjNzEzW}
+```
+## New Learnings
+about changing directories and to run a program which is located in a specific directory and to execute the program from a specific path
 
 
+## Position thy eleswhere
+We can look for our files through navigating different directories using cd command (change directory).
+we executed the program challenge run through a specific directory
+
+### Solve
+**Flag** `pwn.college{UFRlJ9Dfe5BkPUpnkozZEQFjYuO.QX4QTN0wSN0kjNzEzW}`
+
+```bash
+/challenge/run
+cd /etc
+/challenge/run
+pwn.college{UFRlJ9Dfe5BkPUpnkozZEQFjYuO.QX4QTN0wSN0kjNzEzW}
+```
+## New Learnings
+about changing directories and to run a program which is located in a specific directory and to execute the program from a specific path
+
+
+## Implicit relative paths from /
+
+
+### Solve
+**Flag** `pwn.college{UFRlJ9Dfe5BkPUpnkozZEQFjYuO.QX4QTN0wSN0kjNzEzW}`
+
+```bash
+/challenge/run
+cd /etc
+/challenge/run
+pwn.college{UFRlJ9Dfe5BkPUpnkozZEQFjYuO.QX4QTN0wSN0kjNzEzW}
+```
+## New Learnings
+about changing directories and to run a program which is located in a specific directory and to execute the program from a specific path
