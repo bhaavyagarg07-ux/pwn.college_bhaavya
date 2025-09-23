@@ -88,11 +88,13 @@ desrciption of the challenge
 using ls commands to list the files of /challenge and find the name of the file
 
 ### Solve
-**Flag** 
+**Flag** `pwn.college{MwUQR6ZMeEcpsL1xyJ4IfPRgoZC.QX4IDO0wSN0kjNzEzW}`
 
 ```bash
 ls /challenge
-DESCRIPTION.md
+30545-renamed-run-7815  DESCRIPTION.md
+/challenge/30545-renamed-run-7815
+pwn.college{MwUQR6ZMeEcpsL1xyJ4IfPRgoZC.QX4IDO0wSN0kjNzEzW}
 ```
 ### New Learnings
 learned that using ls command we can list the files present in a directory or any path.
