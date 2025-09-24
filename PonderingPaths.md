@@ -96,4 +96,54 @@ relative paths do not start with / it starts with the file like /challenge/run i
 run becomes the relative path
 
 
+## Explicit relative paths from /
+we need to run /challenge/run using a relative path using . in relative 
+path 
 
+### Solve
+**Flag** `pwn.college{wbmf0FokHG6PmtD-IiXhlxj1nyi.QXwUTN0wSN0kjNzEzW}`
+
+```bash
+cd /
+./challenge
+pwn.college{wbmf0FokHG6PmtD-IiXhlxj1nyi.QXwUTN0wSN0kjNzEzW}
+```
+### New Learnings
+we use . to suggest that it is the current directory and .. is the parent directory to navigate the filesystem. we explicitly run the command using .
+
+### Refrences
+https://www.geeksforgeeks.org/linux-unix/absolute-relative-pathnames-unix/
+
+## Explicit relative paths from /
+we need to run /challenge/run using a relative path /challenge using explicitly executing the program run
+
+### Solve
+**Flag** `pwn.college{0CjVniwl8_0UMdaAqXy1BgUFkvH.QXxUTN0wSN0kjNzEzW}`
+
+```bash
+cd /challenge
+run
+./run
+pwn.college{0CjVniwl8_0UMdaAqXy1BgUFkvH.QXxUTN0wSN0kjNzEzW}
+```
+### New Learnings
+if we are using a naked directory inside the current directory and we execute a program whose name is same as the core system program like ls cat cd and your file is corrupted or has malware so it is a saftey feature to not execute that file. we explicitly need to execute it suing . command
+
+
+
+## Home Sweet HOme
+write the copy of flag in the directory we specify 
+
+### Solve
+**Flag** `pwn.college{U5TFR8CNyqd198fpIM6PMeUg04U.QXzMDO0wSN0kjNzEzW}`
+
+```bash
+~/a
+~/
+cd /
+cd
+/challenge/run ~/a
+pwn.college{U5TFR8CNyqd198fpIM6PMeUg04U.QXzMDO0wSN0kjNzEzW}
+```
+### New Learnings
+we can write a copy of a program in any file and can run it 
