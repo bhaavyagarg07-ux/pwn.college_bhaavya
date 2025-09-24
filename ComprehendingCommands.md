@@ -157,3 +157,40 @@ learned that using mv command we can move files
 ### Refrences
 desrciption of the challenge
 
+## Hidden Files
+find the flag in the hidden whiles using ls -a command
+
+### Solve
+**Flag** `pwn.college{8Vo-077662xvae2BcvEiC6O8V1p.QXwUDO0wSN0kjNzEzW}`
+
+```bash
+cd /
+ls -a
+cat .flag-254583684468 
+pwn.college{8Vo-077662xvae2BcvEiC6O8V1p.QXwUDO0wSN0kjNzEzW}
+```
+### New Learnings
+the ls commands do not list the files starting with . to list that we use the command ls -a
+
+### Refrences
+desrciption of the challenge
+
+
+## An Epic Filesystem Quest
+find the hidden flag using cat ls and other commands
+
+### Solve
+**Flag** `pwn.college{IXx76qRmzImPs5RREaPXjk323ka.QX5IDO0wSN0kjNzEzW}`
+
+```bash
+cd /
+ls
+cat SNIPPET
+
+pwn.college{IXx76qRmzImPs5RREaPXjk323ka.QX5IDO0wSN0kjNzEzW}
+```
+### New Learnings
+
+
+### Refrences
+desrciption of the challenge
