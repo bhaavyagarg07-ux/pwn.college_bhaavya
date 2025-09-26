@@ -186,11 +186,59 @@ find the hidden flag using cat ls and other commands
 cd /
 ls
 cat SNIPPET
-
+cd /usr/lib/python3/dist-packages/rpy2/rlike/ __ pycache__
+ls
+cat /usr/include/c++/9/ext/pb_ds/detail/branch_policy/TEASER-TRAPPED
+cd /usr/local/lib/python3.8/dist-packages/pyformlang/ __ pycache_
+ls
+cat INFO
+cat /opt/busybox/busybox-1.33.2/include/config/ash/idle
+$ cd /opt/busybox/busybox-1.33.2/include/config/ash/idle
+ls
+cat INSIGHT
+cd /usr/local/lib/python3.8/dist-packages/jsonschema/tests
+cat BLUEPRINT
+cd /usr/lib/R/library/compiler/html
+ls
+cat README
+cd /usr/share/javascript/mathjax/jax/output/SVG/fonts/STIX-Web/Variants/Italic
+ls
+ls -a
+cat .NOTE
+cat /usr/share/racket/pkgs/syntax-color
+ls
+cat MESSAGE-TRAPPED
 pwn.college{IXx76qRmzImPs5RREaPXjk323ka.QX5IDO0wSN0kjNzEzW}
 ```
 ### New Learnings
+practiced more on cat ls and cd commands
 
 
+## Linking Files
+symmlink /flag to a new path to read out the flag
+
+### Solve
+**Flag** `pwn.college{Urmik-9z5RwIotprn0aTh0v_uP5.QX5ETN1wSN0kjNzEzW}`
+
+```bash
+cat /flag
+ln -s /flag /challenge/catflag
+ln -s /flag /home/hacker/not-the-flag
+cat /home/hacker/not-the-flag
+/challenge/catflag
+pwn.college{Urmik-9z5RwIotprn0aTh0v_uP5.QX5ETN1wSN0kjNzEzW}
+```
+### New Learnings
+the cat /home/hacker/not-the-flag did not work becuz it followed the symmlink and opened /flag. 
+hard link contain content of the file 
+ln original new
+soft link or symmlink contains the path of the original file to new file not the contents
+ln -s orig new
+ls -l shows all the linked files
+ not-the-flag -> /flag
+ the file command tells what type of file is 
+ eg- file README.md
+ ASCII text
+ 
 ### Refrences
-desrciption of the challenge
+https://www.geeksforgeeks.org/linux-unix/soft-hard-links-unixlinux/
