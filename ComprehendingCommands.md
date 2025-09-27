@@ -213,6 +213,44 @@ pwn.college{IXx76qRmzImPs5RREaPXjk323ka.QX5IDO0wSN0kjNzEzW}
 ### New Learnings
 practiced more on cat ls and cd commands
 
+## Making Directories
+make /temp/pwn directory and make a college file in it
+
+### Solve
+**Flag** `pwn.college{wDdwvQ2PEuClzEQQQg4w8RxXAWT.QXxMDO0wSN0kjNzEzW}`
+
+```bash
+cd /tmp
+kkdir pwn
+cd /tmp/pwn
+touch college
+/challenge/run
+pwn.college{wDdwvQ2PEuClzEQQQg4w8RxXAWT.QXxMDO0wSN0kjNzEzW}
+```
+### New Learnings
+using mkdir to make directories 
+
+### Refrences
+desrciption of the challenge
+
+
+## Finding Files
+using find command find the flag
+
+### Solve
+**Flag** `pwn.college{oGwKeJ36e2aSUTKoPNoSbCCEBI2. QXyMDO0wSNOkjNzEzW`
+
+```bash
+find -name flag
+find / -name flag
+cat /opt/pwndbg/.venv/lib/python3.8/site-packages/pwnlib/flag
+cat /usr/lib/R/library/tcltk/demo/flag
+pwn.college{oGwKeJ36e2aSUTKoPNoSbCCEBI2. QXyMDO0wSNOkjNzEzW
+```
+### New Learnings
+using find to find flag in many directories
+### Refrences
+desrciption of the challenge
 
 ## Linking Files
 symmlink /flag to a new path to read out the flag
