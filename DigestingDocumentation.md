@@ -45,7 +45,7 @@ pwn.college{8L1OdqOm_UQ00y33fxVWZ9wuOdy.QX0EDO0wSN0kjNzEzW}
 ### New Learnings
 learned about man command that it displays the manual. we do not input the path of the file in man command it displays garbage. we input just the file name.
 
-## Reading Manuals
+## Searching Manuals
 find the option that reads the flag and implement it in /challenge/challenge
 
 ### Solve
