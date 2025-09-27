@@ -61,15 +61,51 @@ using / we can search in the manual. /flag /challenge or any keyword which match
 
 
 ## Searching for Manuals
-find the option that reads the flag and implement it in /challenge/challenge
+using man man command search the hidden manpage and accordingly use /challenge/challenge to get the flag
 
 ### Solve
-**Flag** `pwn.college{UxLRW1vni3s2S2VR2AU1YB1iJTU.QX1EDO0wSN0kjNzEzW}`
+**Flag** `pwn.college{QnrI-NIWHozh9LQW0IlPIixb1sa.QX2EDO0wSN0kjNzEzW}`
 
 ```bash
-man challenge
-/challenge/challenge --qrxyol
-pwn.college{UxLRW1vni3s2S2VR2AU1YB1iJTU.QX1EDO0wSN0kjNzEzW}
+man man
+man -k /challenge/challenge
+man -K /challenge/challenge
+challeng/challenge --nrozhl 901
+pwn.college{QnrI-NIWHozh9LQW0IlPIixb1sa.QX2EDO0wSN0kjNzEzW}
 ```
 ### New Learnings
-using / we can search in the manual. /flag /challenge or any keyword which matches our purpose n and N are used to navigate through the result
+use man man command to use the manual of the man command itself and figuring out the arguments 
+
+
+## Helpful Programs
+using help to read program documentation and figure out arguments to find flag
+
+### Solve
+**Flag** `pwn.college{YC8C0Z2niZ7FFL4qvxtfDRgYaUi.QX3IDO0wSN0kjNzEzW}`
+
+```bash
+/challenge/challenge --help
+/challenge/challenge  -g GIVE_THE_FLAG
+/challenge/challenge -p
+/challenge/challenge -g 802
+pwn.college{YC8C0Z2niZ7FFL4qvxtfDRgYaUi.QX3IDO0wSN0kjNzEzW}
+```
+### New Learnings
+we learned that some of the programs dont have man page but we can still access it using help argument.
+
+## Help for Builtins
+using help look for builtins and figure out how to find the flag
+
+### Solve
+**Flag** `pwn. college{EhEeBaGAx0liLdJPNsys4SMJRDJ. QXOETO0wSNOk jNzEzw}`
+
+```bash
+challenge help
+help
+help help
+help -m challenge
+challenge -- secret EhEeBaGA
+pwn. college{EhEeBaGAx0liLdJPNsys4SMJRDJ. QXOETO0wSNOk jNzEzw}
+```
+### New Learnings
+learned and practiced more about help and reading out and figuring manuals or instructions
