@@ -121,3 +121,72 @@ pwn.college{MgWaSQ6kAM0er-DDAzY1iXj9Q2C.QX2IDO0wSN0kjNzEzW}
 ### New Learnings
 learned about [!] it means except those words containing those letters will be displayed as output. its like complimenatry function 1-x types
 
+
+
+
+## Tab completion
+without typing cat /challenge/pwncollege using tab key
+
+
+### Solve
+**Flag** `pwn.college{QCYtCKBbYeEjWYgL5JBygYgaT0D.0FN0EzNxwSN0kjNzEzW}`
+
+```bash
+cat /challenge/pwn(tab key)
+pwn.college{QCYtCKBbYeEjWYgL5JBygYgaT0D.0FN0EzNxwSN0kjNzEzW}
+```
+### New Learnings
+learned that tab key automatically completes the file name directory 
+
+
+
+## Tab completion
+without typing cat /challenge/pwncollege using tab key
+
+
+### Solve
+**Flag** `pwn.college{QCYtCKBbYeEjWYgL5JBygYgaT0D.0FN0EzNxwSN0kjNzEzW}`
+
+```bash
+cat /challenge/pwn(tab key)
+pwn.college{QCYtCKBbYeEjWYgL5JBygYgaT0D.0FN0EzNxwSN0kjNzEzW}
+```
+### New Learnings
+learned that tab key automatically completes the file name directory 
+
+
+
+## Tab completion
+challenge has a /challenge/files directory with a bunch of files starting with pwncollege. Tab-complete from /challenge/files/p and find the flag
+
+
+### Solve
+**Flag** `pwn.college{YOEAuDRPkUOSR1OsdoBLhXgkoOH.0lN0EzNxwSN0kjNzEzW}`
+
+```bash
+ls /challenge/files/pwn
+cd /challenge/files
+cat pwncollege-hacking
+cat pwncollege-flamingo
+cat pwn-college
+cat pwncollege-flag
+pwn.college{YOEAuDRPkUOSR1OsdoBLhXgkoOH.0lN0EzNxwSN0kjNzEzW}
+```
+### New Learnings
+learned that tab key automatically completes the file name directory 
+pressing it twice will show all the names
+
+
+
+## Tab completion on commands
+autocomplete the command pwncollege using tab key
+
+### Solve
+**Flag** `pwn.college{gUn8sLl8zmn6dzauYKJjU_y8Dke.0VN0EzNxwSN0kjNzEzW}`
+
+```bash
+pwncollege-17160
+pwn.college{gUn8sLl8zmn6dzauYKJjU_y8Dke.0VN0EzNxwSN0kjNzEzW}
+```
+### New Learnings
+learned that tab key automatically completes the command also
