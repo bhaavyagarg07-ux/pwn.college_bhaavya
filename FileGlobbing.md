@@ -69,3 +69,55 @@ description of challenge
 
 
 
+## Multiple globs
+change directory to /challenge/files and run /challenge/run with single argument for flag file using *
+
+### Solve
+**Flag** `pwn.college{MmwFG_N89d6jWiGdL5v1dS2oAOQ.0lM3kjNxwSN0kjNzEzW}`
+
+```bash
+cd /challenge/files
+cat *p*
+ls *p*
+/challenge/run
+/challenge/run *p*
+pwn.college{MmwFG_N89d6jWiGdL5v1dS2oAOQ.0lM3kjNxwSN0kjNzEzW}
+```
+### New Learnings
+learned more about *
+
+### Refrences
+description of challenge
+
+
+
+## Mixing globs
+change directory to /challenge/files and run /challenge/run with single argument of 6 letters for educational challenging pwning
+
+### Solve
+**Flag** `pwn.college{0UXUH16mhe9GTjz0H4C-YnuTPf5.QX1IDO0wSN0kjNzEzW}`
+
+```bash
+cd /challenge/files
+/challenge/run *[ngl]
+/challenge/run *i[gl]
+/challenge /run [cep]*
+pwn.college{0UXUH16mhe9GTjz0H4C-YnuTPf5.QX1IDO0wSN0kjNzEzW}
+```
+### New Learnings
+practiced more on globbing
+
+
+## Exclusionary globbing
+change directory to /challenge/files and run /challenge/run with single argument of 6 letters for files that dont start with p w n
+### Solve
+**Flag** `pwn.college{MgWaSQ6kAM0er-DDAzY1iXj9Q2C.QX2IDO0wSN0kjNzEzW}`
+
+```bash
+cd /challenge/files
+/challenge/run [!pwn]*
+pwn.college{MgWaSQ6kAM0er-DDAzY1iXj9Q2C.QX2IDO0wSN0kjNzEzW}
+```
+### New Learnings
+learned about [!] it means except those words containing those letters will be displayed as output. its like complimenatry function 1-x types
+
