@@ -34,3 +34,19 @@ using > we can redirect output using paths and files
 
 
 
+## Apending output
+run /challenge/run with an append-mode redirect of the output to the file /home/hacker/the-flag which contains half of the flag
+
+
+### Solve
+**Flag** `pwn.college{I4hACWP2n1c-I3E18ND6AS_ICmk.QX3ATO0wSN0kjNzEzW}`
+
+```bash
+/challenge/run > /home/hacker/the-flag
+stdout >> /home/hacker/the-flag
+/challenge/run >> /home/hacker/the-flag
+cat /home/hacker/the-flag
+pwn.college{I4hACWP2n1c-I3E18ND6AS_ICmk.QX3ATO0wSN0kjNzEzW}
+```
+### New Learnings
+when we use > to redirect output and again use > to redirect output in the same file the previous one gets delted and second one is redirected. we use >> to overwrite the first output
