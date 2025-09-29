@@ -50,3 +50,21 @@ pwn.college{I4hACWP2n1c-I3E18ND6AS_ICmk.QX3ATO0wSN0kjNzEzW}
 ```
 ### New Learnings
 when we use > to redirect output and again use > to redirect output in the same file the previous one gets delted and second one is redirected. we use >> to overwrite the first output
+
+
+## Redirecting errors
+edirect the output of /challenge/run, like before, to myflag, and the "errors" (in our case, the instructions) to instructions
+
+
+### Solve
+**Flag** `pwn.college{0G9mRZPMtioknPPbKL-witWzg3R.QX3YTN0wSN0kjNzEzW}`
+
+```bash
+/challenge/run > myflag
+/challenge/run 2> instructions
+/challenge/run > myflag 2> instructions
+cat myflag
+pwn.college{0G9mRZPMtioknPPbKL-witWzg3R.QX3YTN0wSN0kjNzEzW}
+```
+### New Learnings
+using 2> we can redirect the errors
