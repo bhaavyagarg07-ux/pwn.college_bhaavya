@@ -53,7 +53,7 @@ when we use > to redirect output and again use > to redirect output in the same 
 
 
 ## Redirecting errors
-edirect the output of /challenge/run, like before, to myflag, and the "errors" (in our case, the instructions) to instructions
+redirect the output of /challenge/run, like before, to myflag, and the "errors" (in our case, the instructions) to instructions
 
 
 ### Solve
@@ -68,3 +68,41 @@ pwn.college{0G9mRZPMtioknPPbKL-witWzg3R.QX3YTN0wSN0kjNzEzW}
 ```
 ### New Learnings
 using 2> we can redirect the errors
+
+
+
+
+## Redirecting input
+/challenge/run, which will require you to redirect the PWN file to it and have the PWN file contain the value COLLEGE!
+
+
+### Solve
+**Flag** `pwn.college{0VmZ-Lz8ruJaERkBRRVMzuaG-Iq.QXwcTN0wSN0kjNzEzW}`
+
+```bash
+COLLEGE < PWN
+echo COLLEGE > PWN
+/challenge/run < PWN
+pwn.college{0VmZ-Lz8ruJaERkBRRVMzuaG-Iq.QXwcTN0wSN0kjNzEzW}
+```
+### New Learnings
+using < we can redirect input
+
+
+
+## Grepping stored values
+redirect the output from /challenge/run to /tmp/data.txt and grep the flag
+
+
+### Solve
+**Flag** `pwn.college{UHoTaB0Nw3-emFy6-3i96PotYSf.QX4EDO0wSN0kjNzEzW}`
+
+```bash
+/challenge/run > /tmp/data.txt
+grep flag /tmp/data.txt
+cat flags
+grep pwn.college /tmp/data.txt
+pwn.college{UHoTaB0Nw3-emFy6-3i96PotYSf.QX4EDO0wSN0kjNzEzW}
+```
+### New Learnings
+practiced more on grepping and redirecting
