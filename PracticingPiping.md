@@ -243,3 +243,27 @@ pwn.college{QnLzuJt7g1nQLFDNL7KVTRhWG-W.QXxQDM2wSN0kjNzEzW}
 ### New Learnings
 /planet gets the stdout from /hack and /the hets the stderr from /hack
 the first > is redirection and second > is process substitution
+
+
+
+
+## Named Pipes
+create a /tmp/flag_fifo file and redirect the stdout of /challenge/run to it. If you're successful, /challenge/run will write the flag into the FIFO
+
+### Solve
+**Flag** `pwn.college{0ZkvExOgmG2-dtJa-9fCWer7Dp1.01MzMDOxwSN0kjNzEzW}`
+
+```bash
+mkfifo /tmp/flag_fifo(T1)
+cat /tmp/flag_fifo(T1)
+/challenge/run > /tmp/flag_fifo(T2)
+pwn.college{0ZkvExOgmG2-dtJa-9fCWer7Dp1.01MzMDOxwSN0kjNzEzW}
+```
+### New Learnings
+T1 and T2 specify diffferent terminals
+FIFO required two terminals 
+the  ormal pipe is unnamed and is temporary while a fifo or named pipe can exist longer untill deleted
+using mkfifo we can craete a fifo
+
+### REfrences
+https://www.geeksforgeeks.org/cpp/named-pipe-fifo-example-c-program/
