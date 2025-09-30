@@ -74,20 +74,72 @@ first pwn and college both were shell variable and hence /challenge/run did not 
 
 
 ## Printing Exported Variables
-
+use env  command it will print out every exported variable find the flag
 
 ### Solve
-**Flag** `pwn.college{EtzNzW8mLXjjOECCUh5osvd9z2r.QX5UTN0wSN0kjNzEzW}`
+**Flag** `pwn.college{g5QklHOqelGowouKwz7Ajwr0O2h.QX4UTN0wSN0kjNzEzW}`
 
 ```bash
-PWN=COLLEGE
-pwn.college{EtzNzW8mLXjjOECCUh5osvd9z2r.QX5UTN0wSN0kjNzEzW}
+env
+pwn.college{g5QklHOqelGowouKwz7Ajwr0O2h.QX4UTN0wSN0kjNzEzW}
 ```
 ### New Learnings
-using =$ we can assign value to variable
+using env we can print every exported variable
 
 ### Refrences
 challenge description 
 
+
+
+## Sorting Commands Output
+Read the output of the /challenge/run command directly into a variable called PWN, and it will contain the flag
+
+### Solve
+**Flag** `pwn.college{8ccRDOyYhGnm2i_gEJ9QZ1zzpDF.QX1cDN1wSN0kjNzEzW}`
+
+```bash
+PWN=$(/challenge/run)
+pwn.college{8ccRDOyYhGnm2i_gEJ9QZ1zzpDF.QX1cDN1wSN0kjNzEzW}
+```
+### New Learnings
+we can read output from the file directly and store then in the variable using $()
+
 ### Refrences
 challenge description 
+
+
+
+## Reading Inputs
+read the input of PWN variable as COLLEGE
+
+### Solve
+**Flag** `pwn.college{wlFwnRWCQDaScOXVNNn2W2cP5gq.QX4cTN0wSN0kjNzEzW}`
+
+```bash
+read -p "enter input" PWN
+enter input COLLEGE
+pwn.college{wlFwnRWCQDaScOXVNNn2W2cP5gq.QX4cTN0wSN0kjNzEzW}
+```
+### New Learnings
+using read comand we can read the input using -p argument we can specify a propt message
+
+### Refrences
+challenge description 
+
+## Reading files
+read /challenge/read_me into the PWN environment variable, and we'll give you the flag
+
+### Solve
+**Flag** `pwn.college{ocMJuEKzoDrJt42tY5AGX8_YfAJ.QXwIDO0wSN0kjNzEzW}`
+
+```bash
+read PWN < /challenge/read_me
+pwn.college{ocMJuEKzoDrJt42tY5AGX8_YfAJ.QXwIDO0wSN0kjNzEzW}
+```
+### New Learnings
+we can read the output of a file as a input to the variable. < we redirected the output into the input of PWN variable
+
+### Refrences
+challenge description 
+
+
