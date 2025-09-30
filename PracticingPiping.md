@@ -106,3 +106,140 @@ pwn.college{UHoTaB0Nw3-emFy6-3i96PotYSf.QX4EDO0wSN0kjNzEzW}
 ```
 ### New Learnings
 practiced more on grepping and redirecting
+
+
+
+
+
+## Grepping live output
+/challenge/run will give output to hundered's of flag grep out the real flag
+
+
+### Solve
+**Flag** `pwn.college{UEOA0Tje53K_WxbSBpS0mcPRslO.QX5EDO0wSN0kjNzEzW}`
+
+```bash
+/challenge/run | grep pwn.college
+pwn.college{UEOA0Tje53K_WxbSBpS0mcPRslO.QX5EDO0wSN0kjNzEzW}
+```
+### New Learnings
+practiced more on grepping 
+
+
+
+## Grepping errors
+grep through error to find the flag
+
+### Solve
+**Flag** `pwn.college{omRIz43skX8ACjAF9sM6EEm5arD.QX1ATO0wSN0kjNzEzW}`
+
+```bash
+/challenge/run 2>&1 | grep pwn.college
+pwn.college{omRIz43skX8ACjAF9sM6EEm5arD.QX1ATO0wSN0kjNzEzW}
+```
+### New Learnings
+using >& we can redirect the file description to another file so we first redirected the standard errror to standerd output and piped it
+
+### Refrences
+https://www.geeksforgeeks.org/linux-unix/piping-in-unix-or-linux/
+
+
+## Filtering with grep
+use grep -v to filter out the flags with the word DECOY
+
+### Solve
+**Flag** `pwn.college{oMtvWvRDW-gomqklwK-0_ipX9O2.0FOxEzNxwSN0kjNzEzW}`
+
+```bash
+ /challenge/run | grep -v DECOY
+pwn.college{oMtvWvRDW-gomqklwK-0_ipX9O2.0FOxEzNxwSN0kjNzEzW}
+```
+### New Learnings
+using grep -v we can filter out the outputs 
+
+
+## Duplicating piped data with tee
+/challenge/pwn must be piped into /challenge/college, but you'll need to intercept the data to see what pwn needs
+
+### Solve
+**Flag** `pwn.college{IC7NgOEykALLlCs9IrBkTEMhRZH.QXxITO0wSN0kjNzEzW}`
+
+```bash
+/challenge/pwn | tee fl | /challenge/college
+cat fl
+/challenge/pwn --secret IC7NgOEy
+/challenge/pwn --secret IC7NgOEy | tee fl | /challenge/college
+pwn.college{IC7NgOEykALLlCs9IrBkTEMhRZH.QXxITO0wSN0kjNzEzW}
+```
+### New Learnings
+using tee we can duplicate data it reads standard input and simultaneously reads it to standard output. just like the t pipe in plumbing. here if we did not tee it the output of command 1 would be the input to command 2 but using tee we can see the output of command 1 and find errors if any and modify accordingly
+
+### Refrences
+https://www.geeksforgeeks.org/linux-unix/tee-command-linux-example/
+
+
+
+## Process substitution for input
+using diff command and process substituion find the flag
+
+### Solve
+**Flag** `pwn.college{oon9vGo8eFndzRpQ-mG5HBEwPpN.0lNwMDOxwSN0kjNzEzW}`
+
+```bash
+diff <(/challenge/print_decoys) <(/challenge/print_decoys_and_flag)
+pwn.college{oon9vGo8eFndzRpQ-mG5HBEwPpN.0lNwMDOxwSN0kjNzEzW}
+```
+### New Learnings
+using process substition we can treat output of commands or commands as if they were files. 
+
+
+
+## Writing to multiple programs
+Run the /challenge/hack command, and duplicate its output as input to both the /challenge/the and the /challenge/planet commands
+
+### Solve
+**Flag** `pwn.college{Ix29fpHx3SKq-CkYYhdcfIf05hx.QXwgDN1wSN0kjNzEzW}`
+
+```bash
+/challenge/hack | tee >(/challenge/the) >(/challenge/planet)
+pwn.college{Ix29fpHx3SKq-CkYYhdcfIf05hx.QXwgDN1wSN0kjNzEzW}
+```
+### New Learnings
+tee stored the output of /hack and stored it to 3 diff places stdout /planet and /the
+
+
+## split piping stderr and stdout
+In this challenge, you have:
+
+/challenge/hack: this produces data on stdout and stderr
+/challenge/the: you must redirect hack's stderr to this program
+/challenge/planet: you must redirect hack's stdout to this program
+
+### Solve
+**Flag** `pwn.college{QnLzuJt7g1nQLFDNL7KVTRhWG-W.QXxQDM2wSN0kjNzEzW}`
+
+```bash
+challenge/hack > >(/challenge/planet) 2> >(/challenge/the)
+pwn.college{QnLzuJt7g1nQLFDNL7KVTRhWG-W.QXxQDM2wSN0kjNzEzW}
+```
+### New Learnings
+/planet gets the stdout from /hack and /the hets the stderr from /hack
+
+
+## split piping stdr and stdout
+In this challenge, you have:
+
+/challenge/hack: this produces data on stdout and stderr
+/challenge/the: you must redirect hack's stderr to this program
+/challenge/planet: you must redirect hack's stdout to this program
+
+### Solve
+**Flag** `pwn.college{QnLzuJt7g1nQLFDNL7KVTRhWG-W.QXxQDM2wSN0kjNzEzW}`
+
+```bash
+challenge/hack > >(/challenge/planet) 2> >(/challenge/the)
+pwn.college{QnLzuJt7g1nQLFDNL7KVTRhWG-W.QXxQDM2wSN0kjNzEzW}
+```
+### New Learnings
+/planet gets the stdout from /hack and /the hets the stderr from /hack
+the first > is redirection and second > is process substitution
