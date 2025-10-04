@@ -26,3 +26,23 @@ https://www.geeksforgeeks.org/linux-unix/processes-in-linuxunix/
 
 
 
+## Killing Processes
+kill /challenge/dont_run and run /challenge/run
+
+### Solve
+**Flag:** `pwn.college{EuQcpkyfLmrqSTiB10cXld-NB_M.QXyQDO0wSN0kjNzEzW}`
+
+```bash
+ps -aux | grep challenge
+kill 136
+/challenge/run
+pwn.college{EuQcpkyfLmrqSTiB10cXld-NB_M.QXyQDO0wSN0kjNzEzW}
+```
+
+### New Learnings
+using ps aux i searched for the pid of /challenge/dont_run i used grep so that the challenge is easy to find andd in the challenge description it was used. 
+using kill command we can kill a running process
+kill only accepts the pid of the process and not the name
+
+### References 
+Challenge Description
