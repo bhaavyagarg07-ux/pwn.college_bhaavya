@@ -1,20 +1,24 @@
-# Hello Hackers
+# Module Name
 
-## Challenge name:Intro to commands
-here we entered the commant whoami and we got the output as hacker so when we enter a command we get the output. we entered the commant hello and the flag was generated
+## Challenge Name
+Add challenge description here
 
 ### Solve
-**Flag** `pwn.college{8xGT3aBstFinXFxu72wSwgNT-cr.QX3YjM1wSN0kjNzEzW}`
+**Flag:** `pwn.college{helloworld}`
+
+type in your solve and your thought process behind solving the challenge. Include as much as info as possible. Use triple ticks for any bash commands and output you type on the terminal.
 
 ```bash
-whoami
-hello
-pwn.college{8xGT3aBstFinXFxu72wSwgNT-cr.QX3YjM1wSN0kjNzEzW}
+command 1
+command 2
+pwn.college{helloworld}
 ```
-### New Learnings
-we learned that when we enter a command we get an output 
 
-### Refrences
-module reference video https://youtu.be/g_85EVO3IC0?feature=shared
+### New Learnings
+Brief note on what you learned from the challenge
+
+### References 
+Add any references or videos you used while solving the challenge.
+
 
 
