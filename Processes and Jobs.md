@@ -46,3 +46,51 @@ kill only accepts the pid of the process and not the name
 
 ### References 
 Challenge Description
+
+
+
+
+## Interrupting Processes
+run /challenge/run and interrupt it
+
+### Solve
+**Flag:** `pwn.college{oIg-3PGls8yscNShn2c-2UYk8VF.QXzQDO0wSN0kjNzEzW}`
+
+```bash
+/challenge/run
+ctrl C
+pwn.college{oIg-3PGls8yscNShn2c-2UYk8VF.QXzQDO0wSN0kjNzEzW}
+```
+
+### New Learnings
+using ctrl c we can interrupt a running process
+
+### References 
+Challenge Description
+
+
+
+## Killing Misbehaving Processes
+find the decoy program kill it run /challenge/run to get the flag
+
+### Solve
+**Flag:** `pwn.college{Y3LHkNlNG6i3zdvRT1O1BR8eZnc.0FNzMDOxwSN0kjNzEzW}`
+
+```bash
+ps -aux | grep decoy
+kill 142
+cat /tmp/flag_fifo
+/challenge/run
+cat /tmp/flag_fifo
+pwn.college{Y3LHkNlNG6i3zdvRT1O1BR8eZnc.0FNzMDOxwSN0kjNzEzW}
+```
+
+### New Learnings
+a named pipe fifo should have the input and the output in the same line otherwise it blocks the shell
+
+### References 
+Challenge Description
+
+
+
+
