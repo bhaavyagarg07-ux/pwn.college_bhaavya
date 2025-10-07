@@ -92,5 +92,72 @@ a named pipe fifo should have the input and the output in the same line otherwis
 Challenge Description
 
 
+## Suspending Processes
+run /challenge/run and suspend it
+
+### Solve
+**Flag:** `pwn.college{YIQSh9dNVIhocas28Fc0KDNgWFG.QX1QDO0wSN0kjNzEzW}`
+```bash
+/challenge/run
+ctrl z
+/challenge/run
+pwn.college{YIQSh9dNVIhocas28Fc0KDNgWFG.QX1QDO0wSN0kjNzEzW}
+```
+
+### New Learnings
+using ctrl z we can suspend a running process
+
+### References 
+Challenge Description
+
+
+
+## Resuming Processes
+run /challenge/run and suspend it and then resume it in the foreground 
+
+### Solve
+**Flag:** `pwn.college{047TJ-yxpvakQffEtwC_NV7asFc.QX2QDO0wSN0kjNzEzW}`
+
+
+```bash
+/challenge/run
+ctrl z
+/challenge/run
+fg 
+pwn.college{047TJ-yxpvakQffEtwC_NV7asFc.QX2QDO0wSN0kjNzEzW}
+
+```
+
+### New Learnings
+using fg command we can resume a suspended process
+
+### References 
+Challenge Description
+
+
+## backgrounding Processes
+run /challenge/run and suspend it and then resume it in the background of the terminal and run its another copy
+
+### Solve
+**Flag:** `pwn.college{AlYp7b8sHukKe9Ec5eVUIuyGPlG.QX3QDO0wSN0kjNzEzW}`
+
+
+```bash
+/challenge/run
+ctrl z
+/challenge/run
+bg 
+pwn.college{AlYp7b8sHukKe9Ec5eVUIuyGPlG.QX3QDO0wSN0kjNzEzW}
+```
+
+### New Learnings
+using bg command we can resume a suspended process in the background of the terminal. 
+
+### References 
+Challenge Description
+
+
+
+
 
 
