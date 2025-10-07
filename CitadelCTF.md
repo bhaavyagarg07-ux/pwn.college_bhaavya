@@ -221,5 +221,497 @@ Recovered flag: flag{L$#(!*l0l)u?Ab}
 
 
 ## The sound of music
+Reading through the hints last hinted for last fm citadweller user i found one part of the flag then in rym another part and there was spotify link which gave the third part of the flag
+
+## AetherCorp NetprobX
+In order to try to find the loopholes in the website login database, we found SQL injecting could be one of the ways. But none of the usual commands worked , upon browsing we found %0A could be used before each command instead of ' and it worked. So we tried out the UNION SELECT attack along with injecting NULL.Until the no of NULL s exceeded the no of columns which were getting selected by the original SQL query, a particular error was showing error but the page changed when there were 3 Null. We got a list of employees but it didn't provide any useful clue. So then we used ls command to view all the files, we found potential files that could hold the key and then found blacksite_key.dat file and got the flag by reading it.
+
+## Feels like we only go backwards
+using https://dogbolt.org/?id=2d45bdb9-e245-4ac3-bff3-71fe224d8bfa#Ghidra=438 converted the file to code
+
+```bash
+#include "out.h"
+
+
+
+void _DT_INIT(void)
+
+{
+  __gmon_start__();
+  return;
+}
+
+
+
+void FUN_00101020(void)
+
+{
+  (*(code *)(undefined *)0x0)();
+  return;
+}
+
+
+
+// WARNING: Unknown calling convention -- yet parameter storage is locked
+
+int puts(char *__s)
+
+{
+  int iVar1;
+  
+  iVar1 = puts(__s);
+  return iVar1;
+}
+
+
+
+// WARNING: Unknown calling convention -- yet parameter storage is locked
+
+size_t strlen(char *__s)
+
+{
+  size_t sVar1;
+  
+  sVar1 = strlen(__s);
+  return sVar1;
+}
+
+
+
+// WARNING: Unknown calling convention -- yet parameter storage is locked
+
+int printf(char *__format,...)
+
+{
+  int iVar1;
+  
+  iVar1 = printf(__format);
+  return iVar1;
+}
+
+
+
+// WARNING: Unknown calling convention -- yet parameter storage is locked
+
+size_t strcspn(char *__s,char *__reject)
+
+{
+  size_t sVar1;
+  
+  sVar1 = strcspn(__s,__reject);
+  return sVar1;
+}
+
+
+
+// WARNING: Unknown calling convention -- yet parameter storage is locked
+
+char * fgets(char *__s,int __n,FILE *__stream)
+
+{
+  char *pcVar1;
+  
+  pcVar1 = fgets(__s,__n,__stream);
+  return pcVar1;
+}
+
+
+
+// WARNING: Unknown calling convention -- yet parameter storage is locked
+
+int setvbuf(FILE *__stream,char *__buf,int __modes,size_t __n)
+
+{
+  int iVar1;
+  
+  iVar1 = setvbuf(__stream,__buf,__modes,__n);
+  return iVar1;
+}
+
+
+
+void __isoc99_scanf(void)
+
+{
+  __isoc99_scanf();
+  return;
+}
+
+
+
+// WARNING: Unknown calling convention -- yet parameter storage is locked
+
+void exit(int __status)
+
+{
+                    // WARNING: Subroutine does not return
+  exit(__status);
+}
+
+
+
+// WARNING: Unknown calling convention -- yet parameter storage is locked
+
+int getc(FILE *__stream)
+
+{
+  int iVar1;
+  
+  iVar1 = getc(__stream);
+  return iVar1;
+}
+
+
+
+void __cxa_finalize(void)
+
+{
+  __cxa_finalize();
+  return;
+}
+
+
+
+undefined8 FUN_00101100(void)
+
+{
+  setvbuf(stdout,(char *)0x0,2,0);
+  setvbuf(stdin,(char *)0x0,2,0);
+  puts(&DAT_00104080);
+  FUN_001014c0();
+  return 0;
+}
+
+
+
+void processEntry entry(undefined8 param_1,undefined8 param_2)
+
+{
+  undefined1 auStack_8 [8];
+  
+  __libc_start_main(FUN_00101100,param_2,&stack0x00000008,0,0,param_1,auStack_8);
+  do {
+                    // WARNING: Do nothing block with infinite loop
+  } while( true );
+}
+
+
+
+// WARNING: Removing unreachable block (ram,0x00101193)
+// WARNING: Removing unreachable block (ram,0x0010119f)
+
+void FUN_00101180(void)
+
+{
+  return;
+}
+
+
+
+// WARNING: Removing unreachable block (ram,0x001011d4)
+// WARNING: Removing unreachable block (ram,0x001011e0)
+
+void FUN_001011b0(void)
+
+{
+  return;
+}
+
+
+
+void _FINI_0(void)
+
+{
+  if (DAT_0010e4a8 != '\0') {
+    return;
+  }
+  __cxa_finalize(PTR_LOOP_00104068);
+  FUN_00101180();
+  DAT_0010e4a8 = 1;
+  return;
+}
+
+
+
+void _INIT_0(void)
+
+{
+  FUN_001011b0();
+  return;
+}
+
+
+
+undefined8 FUN_00101240(char *param_1)
+
+{
+  size_t sVar1;
+  long lVar2;
+  byte local_88 [48];
+  short local_58 [40];
+  
+  local_88[0] = 3;
+  local_88[1] = 7;
+  local_88[2] = 0xb;
+  local_88[3] = 0xf;
+  local_88[4] = 0xb;
+  local_88[5] = 7;
+  local_88[6] = 3;
+  local_88[7] = 7;
+  local_88[8] = 0xb;
+  local_88[9] = 0xf;
+  local_88[10] = 0xb;
+  local_88[0xb] = 7;
+  local_88[0xc] = 3;
+  local_88[0xd] = 7;
+  local_88[0xe] = 0xb;
+  local_88[0xf] = 0xf;
+  local_88[0x10] = 0xb;
+  local_88[0x11] = 7;
+  local_88[0x12] = 3;
+  local_88[0x13] = 7;
+  local_88[0x14] = 0xb;
+  local_88[0x15] = 0xf;
+  local_88[0x16] = 0xb;
+  local_88[0x17] = 7;
+  local_88[0x18] = 3;
+  local_88[0x19] = 7;
+  local_88[0x1a] = 0xb;
+  local_88[0x1b] = 0xf;
+  local_88[0x1c] = 0xb;
+  local_88[0x1d] = 7;
+  local_88[0x1e] = 3;
+  local_88[0x1f] = 7;
+  local_88[0x20] = 0xb;
+  local_88[0x21] = 0xf;
+  local_88[0x22] = 0xb;
+  local_88[0x23] = 7;
+  local_88[0x24] = 3;
+  local_58[0] = 0xc9;
+  local_58[1] = 0xde;
+  local_58[2] = 0xfd;
+  local_58[3] = 0xe0;
+  local_58[4] = 0xe7;
+  local_58[5] = 0xea;
+  local_58[6] = 0xf9;
+  local_58[7] = 0x120;
+  local_58[0x20] = 399;
+  local_58[0x21] = 0x11c;
+  local_58[0x22] = 0x183;
+  local_58[0x23] = 0x11c;
+  local_58[8] = 0xff;
+  local_58[9] = 0x9c;
+  local_58[10] = 0x121;
+  local_58[0xb] = 0xfc;
+  local_58[0xc] = 0x9f;
+  local_58[0xd] = 0x124;
+  local_58[0xe] = 0xb7;
+  local_58[0xf] = 0x118;
+  local_58[0x24] = 0x1b1;
+  local_58[0x10] = 0x135;
+  local_58[0x11] = 0xbc;
+  local_58[0x12] = 0x141;
+  local_58[0x13] = 0xcc;
+  local_58[0x14] = 0x12d;
+  local_58[0x15] = 0x148;
+  local_58[0x16] = 0xd9;
+  local_58[0x17] = 0x164;
+  local_58[0x18] = 0x15f;
+  local_58[0x19] = 0x142;
+  local_58[0x1a] = 0xef;
+  local_58[0x1b] = 0x154;
+  local_58[0x1c] = 0x15d;
+  local_58[0x1d] = 0x100;
+  local_58[0x1e] = 0x175;
+  local_58[0x1f] = 0x160;
+  sVar1 = strlen(param_1);
+  if (sVar1 == 0x25) {
+    lVar2 = 0;
+    while (local_58[lVar2] ==
+           (ushort)((ushort)local_88[lVar2] + ((ushort)lVar2 & 0xff) * 5 +
+                   (ushort)(byte)param_1[lVar2] * 2)) {
+      lVar2 = lVar2 + 1;
+      if (lVar2 == 0x25) {
+        return 1;
+      }
+    }
+  }
+  return 0;
+}
+
+
+
+void FUN_00101340(void)
+
+{
+  int iVar1;
+  char *pcVar2;
+  size_t sVar3;
+  long local_90;
+  char local_88 [128];
+  
+  puts("\n=== LEVEL 2 ===");
+  puts("it\'s time for some mind mischief! ");
+  puts("what number is kevin parker thinking of right now: ");
+  iVar1 = __isoc99_scanf(&DAT_00102015,&local_90);
+  if (iVar1 != 1) {
+    puts("Bad input.");
+                    // WARNING: Subroutine does not return
+    exit(0);
+  }
+  if (4 < local_90 - 0x1e6d9e9c7U) {
+    puts("why won\'t you make up your mind? the number he\'s thinking of is way cooler");
+    return;
+  }
+  puts("see! all you had to do was let it happen. ");
+  puts("but let\'s hope it wasn\'t just instant destiny. ");
+  puts("\n=== LEVEL 3 ===");
+  puts(
+      "don\'t make kevin wait for one more year. give him the flag and set your reality in motion! "
+      );
+  printf("Flag: ");
+  do {
+    iVar1 = getc(stdin);
+    if (iVar1 == -1) break;
+  } while (iVar1 != 10);
+  pcVar2 = fgets(local_88,0x80,stdin);
+  if (pcVar2 == (char *)0x0) {
+    puts("Input error.");
+                    // WARNING: Subroutine does not return
+    exit(0);
+  }
+  sVar3 = strcspn(local_88,"\n");
+  local_88[sVar3] = '\0';
+  iVar1 = FUN_00101240(local_88);
+  if (iVar1 != 0) {
+    puts(
+        "RIGHT YOU ARE ! ! ! maybe you can also predict the release date of his next album, but that\'s for another challenge..."
+        );
+    return;
+  }
+  puts("new attempt, same old mistakes");
+  return;
+}
+
+
+
+undefined8 FUN_001014c0(void)
+
+{
+  char *pcVar1;
+  size_t sVar2;
+  ulong uVar3;
+  uint uVar4;
+  ulong uVar5;
+  char *__s;
+  long lVar7;
+  undefined8 *puVar8;
+  undefined8 local_218 [2];
+  char local_208 [512];
+  ulong uVar6;
+  
+  puVar8 = local_218;
+  puts("=== LEVEL 1 ===");
+  __s = local_208;
+  printf("kevin wants you to sing your heart out, it could be some music to walk home by: ");
+  pcVar1 = fgets(__s,0x200,stdin);
+  if (pcVar1 == (char *)0x0) {
+    puts("Input error.");
+  }
+  else {
+    sVar2 = strcspn(__s,"\n");
+    uVar3 = 0x10;
+    if (sVar2 < 0x11) {
+      uVar3 = sVar2;
+    }
+    if (7 < (uint)uVar3) {
+      uVar5 = 0;
+      do {
+        uVar4 = (int)uVar5 + 8;
+        uVar6 = (ulong)uVar4;
+        *(undefined8 *)((long)local_218 + uVar5) = *(undefined8 *)(__s + uVar5);
+        uVar5 = uVar6;
+      } while (uVar4 < ((uint)uVar3 & 0xfffffff8));
+      puVar8 = (undefined8 *)((long)local_218 + uVar6);
+      __s = __s + uVar6;
+    }
+    lVar7 = 0;
+    if ((uVar3 & 4) != 0) {
+      *(undefined4 *)puVar8 = *(undefined4 *)__s;
+      lVar7 = 4;
+    }
+    if ((uVar3 & 2) != 0) {
+      *(undefined2 *)((long)puVar8 + lVar7) = *(undefined2 *)(__s + lVar7);
+      lVar7 = lVar7 + 2;
+    }
+    if ((uVar3 & 1) != 0) {
+      *(char *)((long)puVar8 + lVar7) = __s[lVar7];
+    }
+    if (0xf < sVar2) {
+      puts("okay okay maybe the sun\'s coming up.");
+      FUN_00101340();
+      return 1;
+    }
+    puts("maybe your song needs to be a full length song rather than a snippet");
+  }
+  return 0;
+}
+
+
+
+void _DT_FINI(void)
+
+{
+  return;
+}
+```
+running this got the flag 
+```bash
+Level 1: The Song (Input Length Check)
+The code reads your input string and checks its length. The function FUN_001014c0 proceeds to the next level only if the length of the string (before removing the newline) is greater than 15.
+
+Condition: Input string length ≥16 characters.
+
+Solution: Any string of 16 or more characters will work.
+
+kevin wants you to sing your heart out, it could be some music to walk home by:
+This is my very long song of sixteen chars.
+Level 2: The Number (Math Check)
+The function FUN_00101340 reads a large integer into the variable local_90 and performs a comparison using an unsigned difference.
+
+The success condition is:
+
+local_90−0x1e6d9e9c7U≤4
+This requires the input number to be within 4 units of the constant 0x1e6d9e9c7.
+
+Constant value (Hex): 0x1e6d9e9c7
+
+Constant value (Decimal): 81923050887
+
+Solution: Any number in the range 81923050887 to 81923050891 will pass.
+
+what number is kevin parker thinking of right now:
+81923050888
+Level 3: The Flag (Verification Algorithm)
+The function FUN_00101240 checks the flag. It requires the flag to be exactly 37 characters long and then iterates through each character, verifying it against two pre-defined constant arrays (local_88 and local_58).
+
+The check for each character at index i is:
+
+E[i]=A[i]+(i×5)+(Flag[i]×2)
+Where:
+
+E[i] is the expected value from local_58.
+
+A[i] is the byte constant from local_88.
+
+i is the index (0 to 36).
+
+By solving for Flag[i] in a loop for all 37 indices, we can recover the correct flag.
+
+Solution:
+
+Flag:
+citadel{f0r_0n3_m0r3_h0ur_1_c4n_r4g3}
+```
 
 
