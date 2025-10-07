@@ -135,7 +135,7 @@ using fg command we can resume a suspended process
 Challenge Description
 
 
-## backgrounding Processes
+## Backgrounding Processes
 run /challenge/run and suspend it and then resume it in the background of the terminal and run its another copy
 
 ### Solve
@@ -158,6 +158,69 @@ Challenge Description
 
 
 
+## Foregrounding Processes
+run /challenge/run and suspend it and then resume it in the background of the terminal and then foreground it
+
+### Solve
+**Flag:** `pwn.college{gb4W5ATtw6HD3hwAjNLyQmlggBM.QX4QDO0wSN0kjNzEzW}`
+
+
+```bash
+/challenge/run
+ctrl z
+/challenge/run
+bg
+fg
+pwn.college{gb4W5ATtw6HD3hwAjNLyQmlggBM.QX4QDO0wSN0kjNzEzW}
+```
+
+### New Learnings
+using fg we resumed a background process
+
+### References 
+Challenge Description
+
+
+## Starting BAckground Processes
+In this challenge we are supposed to run /challenge/run without suspending.
+
+### Solve
+**Flag:** `pwn.college{0f0WyyOxF5zbyQRjcXSp9PDnNnR.QX5QDO0wSN0kjNzEzW}`
+
+
+```bash
+/challenge/run & bg
+pwn.college{0f0WyyOxF5zbyQRjcXSp9PDnNnR.QX5QDO0wSN0kjNzEzW}
+```
+
+### New Learnings
+using & bg command we directly ran the process in the background
+
+### References 
+Challenge Description
 
 
 
+
+
+
+## Process Exit Code
+In this challenge we should run challenge/get-code to get an error code and give it as argument to /challenge/submit-code to get the flag
+
+### Solve
+**Flag:** `pwn.college{ILk9BWkyheZ2ZXtuKFYck4_JbFf.QX5YDO1wSN0kjNzEzW}`
+
+
+```bash
+/challenge/get-code $?
+echo $?
+/challenge/submit-code 76
+pwn.college{ILk9BWkyheZ2ZXtuKFYck4_JbFf.QX5YDO1wSN0kjNzEzW}
+```
+
+### New Learnings
+ using echo $? commands that succeed typically return 0 and commands that fail typically return a non-zero value, most commonly 1 but sometimes an error code that identifies a specific failure mode.
+$? is a pre-defined shell variable that holds the error code of the recently executed command
+
+### References 
+Challenge Description
