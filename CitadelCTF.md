@@ -223,8 +223,6 @@ Recovered flag: flag{L$#(!*l0l)u?Ab}
 ## The sound of music
 Reading through the hints last hinted for last fm citadweller user i found one part of the flag then in rym another part and there was spotify link which gave the third part of the flag
 
-## AetherCorp NetprobX
-In order to try to find the loopholes in the website login database, we found SQL injecting could be one of the ways. But none of the usual commands worked , upon browsing we found %0A could be used before each command instead of ' and it worked. So we tried out the UNION SELECT attack along with injecting NULL.Until the no of NULL s exceeded the no of columns which were getting selected by the original SQL query, a particular error was showing error but the page changed when there were 3 Null. We got a list of employees but it didn't provide any useful clue. So then we used ls command to view all the files, we found potential files that could hold the key and then found blacksite_key.dat file and got the flag by reading it.
 
 ## Feels like we only go backwards
 using https://dogbolt.org/?id=2d45bdb9-e245-4ac3-bff3-71fe224d8bfa#Ghidra=438 converted the file to code
