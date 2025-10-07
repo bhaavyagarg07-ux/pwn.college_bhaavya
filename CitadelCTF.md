@@ -713,5 +713,9 @@ Solution:
 Flag:
 citadel{f0r_0n3_m0r3_h0ur_1_c4n_r4g3}
 ```
+## A memory's a heavy burden
+its mt fuji and south of that buddhist temple somehow looking all the way through google maps for hours
+https://www.google.com/maps/@35.4856682,138.6987152,3a,90y,189.94h,89.29t/data=!3m5!1e1!3m3!1sAiIKRR1tC8SieUIAnwZVQQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DAiIKRR1tC8SieUIAnwZVQQ%26w%3D900%26h%3D600%26ll%3D0.0,0.0%26yaw%3D189.0%26pitch%3D1.0%26thumbfov%3D112%26cb_client%3Dgmm.iv.android?utm_source=mstt_0&g_ep=CAESBzI1LjQwLjMYACCBgQEqtAEsOTQyNTk1NDksOTQyNjc3MjcsOTQyOTIxOTUsOTQyODQ0NzUsOTQyMjMyOTksOTQyMTY0MTMsOTQyODI4ODQsOTQyODA1NzYsOTQyMTI0OTYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTc1MjMsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsOTQyNzk2MTksOTQyNjI3MzMsNDcwODQzOTMsOTQyMTMyMDBCAklO&skid=185d744e-6954-4f50-9495-07e0d7407af8&g_st=ac 
+got the coordinates of the place
 
 
