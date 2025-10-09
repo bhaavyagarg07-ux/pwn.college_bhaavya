@@ -134,7 +134,10 @@ desrciption of the challenge
 
 
 ## Script with Arguments 
-
+For this challenge, you need to write a script at /home/hacker/solve.sh that:
+Takes two arguments
+Outputs them in REVERSE order (second argument first, then the first argument)
+after than run /challenge/run
 ### Solve
 **Flag** `pwn.college{A4-RBZDsIMILENmt7vXRmC1WOWr.0VNzMDOxwSN0kjNzEzW}`
 
@@ -146,6 +149,123 @@ pwn.college{A4-RBZDsIMILENmt7vXRmC1WOWr.0VNzMDOxwSN0kjNzEzW}
 ```
 ### New Learnings
 learned about arguments
+
+### Refrences
+desrciption of the challenge
+
+
+## Scripting with conditions
+write a scrift that prints college if the inpu is pwn
+
+### Solve
+**Flag** `pwn.college{gaNTdylSSmhUX1Wf1mOi-SJYzcp.0lNzMDOxwSN0kjNzEzW}`
+
+```bash
+echo '#!/bin/bash' > /home/hacker/solve.sh
+hacker@chaining~scripting-with-conditionals:~$ echo 'if [ "$1" = "pwn" ]
+> then
+> echo college
+> fi ' >> /home/hacker/solve.sh
+hacker@chaining~scripting-with-conditionals:~$ chmod a+x /home/hacker/solve.sh
+hacker@chaining~scripting-with-conditionals:~$ /challenge/run
+Correct! Your script properly handles all the conditions.
+Here's your flag:
+pwn.college{gaNTdylSSmhUX1Wf1mOi-SJYzcp.0lNzMDOxwSN0kjNzEzW}
+```
+### New Learnings
+learned if then fi commands and practiced more on scripting
+
+### Refrences
+desrciption of the challenge
+
+
+
+## Scripting with default cases
+write a scrift that prints college if the input is pwn and nope for all other input
+
+### Solve
+**Flag** `pwn.college{Yopw68F6qIjW625zmdA2_l9-iyB.01NzMDOxwSN0kjNzEzW}`
+
+```bash
+ echo '#!/bin/bash' > /home/hacker/solve.sh
+hacker@chaining~scripting-with-default-cases:~$ echo 'if [ "$1" = "pwn" ]
+then
+echo college
+else
+echo nope
+fi ' >> /home/hacker/solve.sh
+hacker@chaining~scripting-with-default-cases:~$ chmod a+x /home/hacker/solve.sh
+hacker@chaining~scripting-with-default-cases:~$ /challenge/run
+Correct! Your script properly handles the if/else conditions.
+Here's your flag:
+pwn.college{Yopw68F6qIjW625zmdA2_l9-iyB.01NzMDOxwSN0kjNzEzW}
+```
+### New Learnings
+learned if then else fi commands and practiced more on scripting
+
+### Refrences
+desrciption of the challenge
+
+
+
+## Scripting with multiple conditions
+write a scrift that prints college if the input is pwn input learn output linux and unknown for all other cases
+
+### Solve
+**Flag** `pwn.college{EeGlFqaXFNnaSOd6m16PbtVofkV.0FOzMDOxwSN0kjNzEzW}`
+
+```bash
+ echo '#!/bin/bash' > /home/hacker/solve.sh
+hacker@chaining~scripting-with-multiple-conditions:~$ echo 'if [ "$1" = "hack" ]
+> then
+> echo "the planet"
+> elif [ "$1" == "pwn" ]
+> then
+> echo college
+> elif [ "$1" == "learn" ]
+> then
+> echo linux
+> else
+> echo unknown
+> fi ' >> /home/hacker/solve.sh
+hacker@chaining~scripting-with-multiple-conditions:~$ chmod a+x /home/hacker/solve.sh
+hacker@chaining~scripting-with-multiple-conditions:~$ /challenge/run
+Correct! Your script properly handles all the conditions with elif.
+Here's your flag:
+pwn.college{EeGlFqaXFNnaSOd6m16PbtVofkV.0FOzMDOxwSN0kjNzEzW}
+```
+### New Learnings
+learned if then elif else fi commands and practiced more on scripting
+
+### Refrences
+desrciption of the challenge
+
+
+
+## Reading shell scripts 
+read a script and find password and run /challenge/run
+### Solve
+**Flag** `pwn.college{snCQRcw6CthU7_gIEqho5LzJuRO.0lMwgDOxwSN0kjNzEzW}`
+
+```bash
+cat /challenge/run
+#!/opt/pwn.college/bash
+
+read GUESS
+if [ "$GUESS" == "hack the PLANET" ]
+then
+        echo "CORRECT! Your flag:"
+        cat /flag
+else
+        echo "Read the /challenge/run file to figure out the correct password!"
+fi
+hacker@chaining~reading-shell-scripts:~$ /challenge/run
+hack the PLANET
+CORRECT! Your flag:
+pwn.college{snCQRcw6CthU7_gIEqho5LzJuRO.0lMwgDOxwSN0kjNzEzW}
+```
+### New Learnings
+learned to read scripts
 
 ### Refrences
 desrciption of the challenge
