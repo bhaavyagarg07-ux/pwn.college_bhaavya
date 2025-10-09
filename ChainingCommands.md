@@ -91,3 +91,43 @@ desrciption of the challenge
 
 
 
+## Redirecting Script Output
+make a shell script with /challenge/solve and run it without bash
+
+### Solve
+**Flag** `pwn.college{YM_1F3BTiyS8dDgSPSYxdGOe28L.QX0cjM1wSN0kjNzEzW}`
+
+```bash
+echo /challenge/solve > x.sh
+./x.sh
+ls -l x.sh
+chmod a+x x.sh
+./x.sh
+pwn.college{YM_1F3BTiyS8dDgSPSYxdGOe28L.QX0cjM1wSN0kjNzEzW}
+```
+### New Learnings
+we can directly run a shell from home directory
+
+### Refrences
+desrciption of the challenge
+
+
+
+## Understanding Shebangs
+make a shell script with /challenge/solve and run it without bash
+
+### Solve
+**Flag** `pwn.college{YM_1F3BTiyS8dDgSPSYxdGOe28L.QX0cjM1wSN0kjNzEzW}`
+
+```bash
+ echo '#!/bin/bash' > /home/hacker/solve.sh
+echo 'echo "hack the planet"' >> /home/hacker/solve.sh
+chmod a+x /home/hacker/solve.sh
+/challenge/run
+Flag: pwn.college{IQ8p3V9aIFZ_YejqHCVPqcpe5rG.0VOzMDOxwSN0kjNzEzW}
+```
+### New Learnings
+learned to use shebangs. we created a executable file /bin/bash so that the terminal knows to run the file with bash.
+
+### Refrences
+desrciption of the challenge
