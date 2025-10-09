@@ -560,3 +560,24 @@ more practice and using =,
 
 ### Refrences
 Challenge Description
+
+
+
+
+## The SUID bit
+In this challenge we have to give ourselves permission to run the /challenge/getroot and read the flag as root user
+
+### Solve
+**Flag** `pwn.college{MiCIvM1A0RM2THwXmSfz6Gr9KMz.QXzEjN0wSN0kjNzEzW}`
+
+```bash
+chmod u+s /challenge/getroot
+/challenge/getroot
+cat /flag
+pwn.college{MiCIvM1A0RM2THwXmSfz6Gr9KMz.QXzEjN0wSN0kjNzEzW}
+```
+### New Learnings
+using gave myself the su permissions to /challenge/getroot and then read the /flag after running*/challenge/getroot
+
+### Refrences
+Challenge Description
