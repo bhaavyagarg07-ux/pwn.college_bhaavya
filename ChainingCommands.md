@@ -131,3 +131,21 @@ learned to use shebangs. we created a executable file /bin/bash so that the term
 
 ### Refrences
 desrciption of the challenge
+
+
+## Script with Arguments 
+
+### Solve
+**Flag** `pwn.college{A4-RBZDsIMILENmt7vXRmC1WOWr.0VNzMDOxwSN0kjNzEzW}`
+
+```bash
+echo '#!/bin/bash' > /home/hacker/solve.sh
+echo 'echo "$2 $1"' >> /home/hacker/solve.sh
+/challenge/run
+pwn.college{A4-RBZDsIMILENmt7vXRmC1WOWr.0VNzMDOxwSN0kjNzEzW}
+```
+### New Learnings
+learned about arguments
+
+### Refrences
+desrciption of the challenge
